@@ -4,4 +4,4 @@ metadata:
   name: test-backend-deployment
   namespace: test-backend
 spec:
-  replicas: 5
+  replicas: 2
