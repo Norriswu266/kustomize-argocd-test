@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-backend
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-backend-deployment
+  namespace: test-backend
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - image: nginx
+        name: backend
+        ports:
+        - containerPort: 80
