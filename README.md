@@ -45,3 +45,7 @@ kind: Service
 ...
 
 ```
+
+最終指令
+kustomize build overlays/dev > ./kustomization/manifests.yaml && git add . && git commit -m "test" && git push && argocd app sync kustomize-argocd-test-app
+
